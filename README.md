@@ -16,7 +16,7 @@ Add variables to the pipeline:
 ```yaml
 variables:
   APPROVAL_CHECKER_DEBUG: "true" # ci logging
-  PROJECT_UPVOTES_QUANTITY: "1"  # required quantity of merge request upvotes
+  APPROVAL_CHECKER_UPVOTES_QUANTITY: "1"  # required quantity of merge request upvotes
 ```
 
 Add a stage to the pipeline:
@@ -28,9 +28,9 @@ stages:
 
 Add a variable to your Gitlab CI settings:
 
-| Name                     | Value                                      |
-|--------------------------|--------------------------------------------|
-| PROJECT_PRIVATE_TOKEN    | Private token of the project               |
+| Name                           | Value                                      |
+|--------------------------------|--------------------------------------------|
+| APPROVAL_CHECKER_PRIVATE_TOKEN | Private token of the project               |
 
 ## Automated approval checking
 
@@ -44,6 +44,6 @@ include:
 
 Add a scheduled pipeline to your project (**CI/CD** > **Schedules**) with a variable:
 
-| Name                  | Value                            |
-|-----------------------|----------------------------------|
-| SCHEDULED_JOB_NAME    | scheduled-approval               |
+| Name                                | Value                            |
+|-------------------------------------|----------------------------------|
+| APPROVAL_CHECKER_SCHEDULED_JOB_NAME | scheduled-approval               |
