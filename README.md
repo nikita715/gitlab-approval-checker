@@ -8,7 +8,7 @@ Import the plugin to your GitLab CI pipeline:
 
 ```yaml
 include:
-  - remote: 'https://raw.githubusercontent.com/nikita715/gitlab-approval-checker/main/approval-check.gitlab-ci.yml'
+  - remote: 'https://raw.githubusercontent.com/nikita715/gitlab-approval-checker/v1.0.0/approval-check.gitlab-ci.yml'
 ```
 
 Add variables to the pipeline:
@@ -39,7 +39,7 @@ In addition to the above settings, you need to import this plugin:
 
 ```yaml
 include:
-  - remote: 'https://raw.githubusercontent.com/nikita715/gitlab-approval-checker/main/approval-scheduled-check.gitlab-ci.yml'
+  - remote: 'https://raw.githubusercontent.com/nikita715/gitlab-approval-checker/v1.0.0/approval-scheduled-check.gitlab-ci.yml'
 ```
 
 Add a scheduled pipeline to your project (**CI/CD** > **Schedules**) with a variable:
