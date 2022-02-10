@@ -28,9 +28,9 @@ stages:
 
 Add a variable to your Gitlab CI settings:
 
-| Name                           | Value                                      |
-|--------------------------------|--------------------------------------------|
-| APPROVAL_CHECKER_PRIVATE_TOKEN | Private token of the project               |
+| Name                           | Value                                                     |
+|--------------------------------|-----------------------------------------------------------|
+| APPROVAL_CHECKER_PRIVATE_TOKEN | Private token of the project with scopes \[api, read_api] |
 
 ## Automated approval checking
 
