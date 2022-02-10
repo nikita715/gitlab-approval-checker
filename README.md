@@ -3,7 +3,7 @@
 
 # gitlab-approval-checker
 
-Plugin for GitLab CI that adds a stage to check whether a merge request is approved by N people or not.
+Plugin for GitLab CI that adds a stage to check whether a merge request has N upvotes or not.
 
 ## Usage
 
