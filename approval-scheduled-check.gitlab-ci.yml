@@ -1,7 +1,7 @@
 scheduled-approval:check:
-  stage: scheduled-approval
+  stage: check-approval
+  image: nikstep/gitlab-approve-checker-env:1.1.2
   rules:
     - if: $SCHEDULED_JOB_NAME == "scheduled-approval"
-  image: nikstep/gitlab-approve-checker-env:1.1.2
   script:
     - bash /opt/approval-check/scheduled-check.sh
