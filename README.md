@@ -1,3 +1,6 @@
+[![Docker Automated build](https://img.shields.io/docker/automated/nikstep/gitlab-approve-checker-env)](https://hub.docker.com/r/nikstep/gitlab-approve-checker-env/tags)
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/nikita715/gitlab-approval-checker)](https://github.com/nikita715/gitlab-approval-checker/releases)
+
 # gitlab-approval-checker
 
 Plugin for GitLab CI that adds a stage to check whether a merge request is approved by N people or not.
