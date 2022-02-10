@@ -1,6 +1,6 @@
 approval:check:
   stage: approve
-  image: nikstep/gitlab-approve-checker-env:1.1.1
+  image: nikstep/gitlab-approve-checker-env:1.1.2
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
   script:
