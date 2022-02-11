@@ -1,14 +1,12 @@
-./init.sh
+source ./init.sh
 
 MR_DATA=$(makeRequest GET "/merge_requests/${CI_MERGE_REQUEST_IID}")
 log "MR_DATA=$MR_DATA"
 
-read -a arr < <(echo $(echo $MR_DATA | jq -r '.upvotes'))
-
-MR_UPVOTES=${arr[0]}
+MR_UPVOTES=$(parseJson "$MR_DATA" '.upvotes')
 log "MR_UPVOTES=$MR_UPVOTES"
 
-if [ "${MR_UPVOTES}" -ge "$(expr ${APPROVAL_CHECKER_UPVOTES_QUANTITY})" ];
+if [ "${MR_UPVOTES}" -ge "${APPROVAL_CHECKER_UPVOTES_QUANTITY}" ];
   then
     echo "MR OK";
   else
