@@ -1,4 +1,4 @@
-source ./init.sh
+source init.sh
 
 MRS_DATA=$(makeRequest GET "/merge_requests?state=opened")
 log "MRS_DATA=$MRS_DATA"

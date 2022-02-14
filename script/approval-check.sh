@@ -1,4 +1,4 @@
-source ./init.sh
+source init.sh
 
 MR_DATA=$(makeRequest GET "/merge_requests/${CI_MERGE_REQUEST_IID}")
 log "MR_DATA=$MR_DATA"
