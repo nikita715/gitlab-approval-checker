@@ -15,7 +15,8 @@ parseJson "$MRS_DATA" '.[]|[.iid] | @tsv' |
         JOBS_JSON=$(makeRequest GET "/pipelines/${PIPELINE_ID}/jobs?scope=failed")
         APPROVE_JOB_ID=$(parseJson "$JOBS_JSON" '.[] | select(.name=="approval:check") | .id')
         log "PIPELINE_ID=$PIPELINE_ID, APPROVE_JOB_ID=$APPROVE_JOB_ID"
-        log makeRequest POST "/jobs/${APPROVE_JOB_ID}/retry"
+        APPROVE_JOB_JSON=$(makeRequest POST "/jobs/${APPROVE_JOB_ID}/retry")
+        log "APPROVE_JOB_JSON=$APPROVE_JOB_JSON"
       fi
     fi
   done
