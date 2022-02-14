@@ -4,4 +4,5 @@ scheduled-approval:check:
   rules:
     - if: $APPROVAL_CHECKER_SCHEDULED_JOB_NAME == "scheduled-approval"
   script:
+    - cd /opt/approval-check
     - bash scheduled-check.sh

@@ -4,6 +4,5 @@ approval:check:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
   script:
-    - pwd
-    - ls
+    - cd /opt/approval-check
     - bash check.sh
